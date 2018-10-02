@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
     public CamFollow cam;
 
 	// Use this for initialization
+	//初期化のためにこれを使用
 	void Awake () {
         instance = this;
         UpdateUI();
