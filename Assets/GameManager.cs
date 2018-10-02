@@ -77,12 +77,14 @@ public class GameManager : MonoBehaviour {
         UpdateUI();
 
         //라운드를 다시 처음부터 시작
+	//ラウンドを再び最初からスタート
         StartCoroutine("RoundRoutine");
     }
 
     IEnumerator RoundRoutine()
     {
         //READY
+	 //レディ
         onReset.Invoke();
 
         readyPannel.SetActive(true);
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(3f);
 
         //PLAY
+	//プレー
         isRoundActive = true;
         readyPannel.SetActive(false);
         shooterRotator.enabled = true;
@@ -108,7 +111,7 @@ public class GameManager : MonoBehaviour {
         }
 
         //END
-
+	//エンド
         readyPannel.SetActive(true);
         shooterRotator.enabled = false;
 
