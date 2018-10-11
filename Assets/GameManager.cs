@@ -78,14 +78,14 @@ public class GameManager : MonoBehaviour {
         UpdateUI();
 
         //라운드를 다시 처음부터 시작
-	//ラウンドを再び最初からスタート
+	//ラウンドを再びスタート
         StartCoroutine("RoundRoutine");
     }
 
     IEnumerator RoundRoutine()
     {
         //READY
-	 //レディ
+	 //レディー
         onReset.Invoke();
 
         readyPannel.SetActive(true);
