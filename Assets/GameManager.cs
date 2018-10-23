@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour {
 
     public CamFollow cam;
 
-	// Use this for initialization
 	//初期化のためにこれを使用
 	void Awake () {
         instance = this;
@@ -77,14 +76,12 @@ public class GameManager : MonoBehaviour {
         score = 0;
         UpdateUI();
 
-        //라운드를 다시 처음부터 시작
 	//ラウンドを再びスタート
         StartCoroutine("RoundRoutine");
     }
 
     IEnumerator RoundRoutine()
     {
-        //READY
 	 //レディー
         onReset.Invoke();
 
@@ -98,7 +95,6 @@ public class GameManager : MonoBehaviour {
 
         yield return new WaitForSeconds(3f);
 
-        //PLAY
 	//プレー
         isRoundActive = true;
         readyPannel.SetActive(false);
@@ -111,7 +107,6 @@ public class GameManager : MonoBehaviour {
             yield return null;
         }
 
-        //END
 	//エンド
         readyPannel.SetActive(true);
         shooterRotator.enabled = false;
