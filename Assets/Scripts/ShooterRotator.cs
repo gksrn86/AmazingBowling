@@ -68,7 +68,7 @@ public class ShooterRotator : MonoBehaviour {
 }
 
 
-//if문으로 작성시
+
 //ifで作成時
 /*
 if(state == RotateState.Idle)
