@@ -12,7 +12,6 @@ public class Prop : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
-        // hp = hp - damage;
         //体力=体力-ダメージ
         hp -= damage;
 
