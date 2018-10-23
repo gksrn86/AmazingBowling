@@ -61,8 +61,7 @@ public class Ball : MonoBehaviour {
 
         float distance = explosionToTarget.magnitude;
 
-        float edgeToCenterDistance = explosionRadius - distance;  //distance 가 0이면 100퍼센트 데미지 1이면 0의 데미지
-                                                                  //distanceが0なら100パーセントダメージ　1なら0のダメージ
+        float edgeToCenterDistance = explosionRadius - distance;  //distanceが0なら100パーセントダメージ　1なら0のダメージ
 
         float percentage = edgeToCenterDistance / explosionRadius;
 
