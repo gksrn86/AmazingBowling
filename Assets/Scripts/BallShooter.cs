@@ -53,7 +53,8 @@ public class BallShooter : MonoBehaviour {
     {
         if(fired == true)
         {
-            return;  // 한번 발사되면 안되도록 지정
+            return;  // 一度発射されてはならないように指定 
+                     
         }
 
         powerSlider.value = minForce;
@@ -62,11 +63,11 @@ public class BallShooter : MonoBehaviour {
         {
             currentForce = maxForce;
             Fire();
-            //발사처리
+            //発射処理
         }
         else if(Input.GetButtonDown("Fire1"))
         {
-            //연사하고 싶으면
+            //連射したければ
             fired = false;
             
             currentForce = minForce;
@@ -74,7 +75,7 @@ public class BallShooter : MonoBehaviour {
             shootingAudio.clip = chargingClip;
 
             shootingAudio.Play();
-            //발사버튼을 누르는 순간
+            //発射ボタンを押す瞬間
 
         }
         else if(Input.GetButton("Fire1") && !fired)
@@ -82,13 +83,13 @@ public class BallShooter : MonoBehaviour {
             currentForce = currentForce + chargingSpeed * Time.deltaTime;
 
             powerSlider.value = currentForce;
-            //발사버튼을 누르고 있는 동안
+            //発射ボタンを押している間
         }
         else if(Input.GetButtonUp("Fire1") && !fired)
         {
-            //발사버튼 손을 땔때
+            //発射ボタンの手を出す時
             Fire();
-            // 발사처리
+            // 発射処理
         }
     }
 
@@ -98,7 +99,7 @@ public class BallShooter : MonoBehaviour {
 
         Rigidbody ballInstance = Instantiate(ball, firePos.position, firePos.rotation);
 
-        ballInstance.velocity = currentForce * firePos.forward; //힘 * 방향 속도지정
+        ballInstance.velocity = currentForce * firePos.forward; //力 * 方向 = 速度 指定
 
         shootingAudio.clip = fireClip;
 
