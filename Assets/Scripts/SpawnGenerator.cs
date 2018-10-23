@@ -14,7 +14,6 @@ public class SpawnGenerator : MonoBehaviour {
 
 
 
-	// Use this for initialization
 	//初期化のためにこれを使用
 	void Start () {
         area = GetComponent<BoxCollider>();
@@ -22,7 +21,6 @@ public class SpawnGenerator : MonoBehaviour {
         for(int i = 0; i < count; i++)
         {
             Spawn();
-            //생성용 함수
 	    //生成用関数
         }
 
